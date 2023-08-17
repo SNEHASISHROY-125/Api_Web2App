@@ -97,3 +97,9 @@ def delete_user(request: DUser , db: Session=Depends(get_db) ):
     user.delete(synchronize_session=False)
     db.commit()
     return f'User with Name:{request.name} was deleted'
+
+
+# # Execute the startup event function when running with uvicorn
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
