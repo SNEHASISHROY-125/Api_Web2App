@@ -10,7 +10,7 @@ server_socket =  socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 host = socket.gethostname()
 print('host:',host)
 
-server_socket.bind((host,9090))
+server_socket.bind(('0.0.0.0',9090))
 server_socket.listen()
 
 print(f'server listening! at {host}')
