@@ -23,11 +23,11 @@ app= FastAPI()
 def home():
     return {'helo'}
 
-@app.get('/server')
-def home():
-    print('Server started!')
-    import server
-    return {'helo'}
+# @app.get('/server')
+# def home():
+#     print('Server started!')
+#     import server
+#     return {'helo'}
 
 
 @app.post('/blog', status_code=status.HTTP_201_CREATED,tags=['Blogs'])
